@@ -3,12 +3,23 @@ def funcion(a,b):
     for i in range(1,b):
         resultado=resultado*a
     return resultado
+
+contador_potencia=0
+contador_pares=0
+contador_impares=0
 a=int(input("Ingresar el numeroa elevar: "))
 b=int(input("Ingresar el numeroa por el que se elevara: "))
-resultado=funcion(a,b)
-print(resultado)
+
 while a != 0:
-    a=int(input("Ingresar el numeroa elevar: "))
-    b=int(input("Ingresar el numeroa por el que se elevara: "))
     resultado=funcion(a,b)
     print(resultado)
+    contador_potencia += 1
+    if resultado%2==0 :
+        contador_pares += 1
+    else:
+        contador_impares += 1
+    print("Se calcularon ",contador_potencia," potencias")
+    print("Se calcularon ",contador_pares," potencias pares")
+    print("Se calcularon ",contador_impares," potencias impares")
+    a=int(input("Ingresar el numeroa elevar: "))
+    b=int(input("Ingresar el numeroa por el que se elevara: "))
